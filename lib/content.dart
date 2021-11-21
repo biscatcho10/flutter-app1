@@ -13,7 +13,7 @@ class Content extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(54, 44, 107, 1),
             leading: const Icon(Icons.home),
-            title: const Text("Home Page"),
+            title: const Text("Home Page one"),
           ),
           body: Center(
             child: Column(
