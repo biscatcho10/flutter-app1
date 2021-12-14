@@ -6,32 +6,30 @@ class Content extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child:const Icon(Icons.add),
-          ),
-          appBar: AppBar(
-            backgroundColor: const Color.fromRGBO(54, 44, 107, 1),
-            leading: const Icon(Icons.home),
-            title: const Text("Home Page one"),
-          ),
-          body: Center(
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        print('Button is Clicked!');
-                      },
-                      icon:const Icon(Icons.add_moderator),
-                      color: Colors.blue,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          )),
+        appBar: AppBar(
+          leading: const Icon(Icons.home),
+          title: const Text("Home Page"),
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.white,
+          shadowColor: Colors.indigo,
+          elevation: 8,
+          actions: const [
+            Icon(
+              Icons.arrow_forward,
+              color: Colors.grey,
+              size: 30,
+              textDirection: TextDirection.ltr,
+            )
+          ],
+        ),
+        body: Container(
+          child: const Text("Home Content"),
+          color: const Color(0xff4d6b55),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.all(10),
+          margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+        ),
+      ),
     );
   }
 }

@@ -1,0 +1,74 @@
+# main function used to run the app
+void main(){}
+
+# runApp() => used to run the app class(must be widget).
+
+# if extend from Stateless Widget => must override build() fun
+
+# in build() => return MaterialApp()
+
+# most common widget in MaterialApp() is => home :
+
+# Scaffold() =>used to create the all page and contain all its widgets like(appBar, body, floatingActionButton)
+
+# we can put items of the page in => (Container, Column, Row, Center)
+
+# Container and Center have one child, but Column and Row have children
+
+# make alignment (Row, Column) by => (mainAxisAlignment, crossAxisAlignment)
+
+# appBar : AppBar() contain some widgets (title, leading, actions, backgroundColor)
+
+# to hide the sign banner in the app bar => in MaterialApp( debugShowCheckedModeBanner: false, )
+
+# using appBar =>
+    appBar: AppBar(
+              leading: const Icon(Icons.home),
+              title: const Text("Home Page"),
+              backgroundColor: Colors.indigo,
+              backgroundColor: Colors.indigo,
+              foregroundColor: Colors.white,
+              shadowColor: Colors.indigo,
+              elevation: 8,
+              actions: const [Icon(Icons.arrow_forward)],
+            ),
+
+# using Icon =>
+            Icon(
+              Icons.arrow_forward,
+              color: Colors.grey,
+              size: 30,
+              textDirection: TextDirection.ltr,
+            )
+
+# padding =>
+            Padding(
+                padding: EdgeInsets.all(16.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0);
+                child: Text('Padding'),
+             ),
+
+# Margin =>
+            Margin(
+                margin: EdgeInsets.all(16.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0);
+                child: Text('Padding'),
+             ),
+
+# Container =>
+            Container(
+              child: const Text("Home Content"),
+              color: Colors.blue,
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(10),
+              margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+            ),
+
+# Colors =>
+            color : Colors.name => Colors.red
+            color : Colors.name[50:900] => Colors.red[700]
+            color : Color(value) => Color(0xff4d6b55)
+            color : Color.fromRGBO(r, g, b, opacity), => Color.fromRGBO(75, 78, 42, 0.5),
+            color : Color.fromARGB(a, r, g, b)  => Color.fromARGB(175, 45, 78, 78),
